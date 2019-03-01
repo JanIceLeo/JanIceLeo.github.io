@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+	<html>
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                //Next/Previous controls
+                function plusSlides(n){
+                    showslides(slideIndex += n);
+                }
+                
+                //Thumbnail image control
+                function currentSlide(n){
+                    showSlide(slideIndex = n);
+                }
+                
+                function showSlides(n){
+                    var i;
+                    var slides = document.getElementByClassName("mySLide");
+                    var dots = document.getElementByClassName("dot");
+                    if(n>slides.length){
+                        slideIndex = 1
+                    }
+                    if(n<1){
+                        slideIndex=slides.length
+                    }
+                    for(i=0;i<slides.length;i++){
+                        slides[i].style.display = "none";
+                    }
+                    for (i=0;i<dots.length;i++){
+                        dots[i].className = dots[i].className.replace("ative","");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += "active";
+                }
+            </script>
+	<style>
+        *{
+            box-sizing: border-box;
+        }
+	body{
+		font-family:Comic Sans MS;
+		padding:10px;
+		margin:10px;
+		background:rgba(0,0,0,0.8);
+		color:white;
+	}
+	h1{
+		text-align:center;
+	}
+	.navbar{
+		overflow: hidden;
+                background-color: black;
+                margin: 10px;
+	}
+	.navbar a {
+		color:white;
+		float:left;
+		text-decoration:none;
+		padding:14px 16px;
+	}
+	.navbar a:hover{
+		color:black;
+		background-color:white;
+	}
+        
+        .active{
+            color: white;
+            background-color:rgba(0,0,225,0.5);
+        }
+        
+        .slideshow{
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        
+        .mySlides{
+            display: grid;
+        }
+        
+/*        .dot{
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0px;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .dot:hover{
+            background-color:#717171; 
+        }
+        
+        .fade{
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade{
+            from{opacity: .4}
+            to{opacity: 0}
+        }*/
+	</style>
+		<head>
+                    <meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Home Page</title>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+
+				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133584425-1"></script>
+
+				<script>
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+                                        gtag('config', 'UA-133584425-1');
+
+				</script>
+		<h1>Web Pages</h1>
+		</head>
+		
+                <body>
+                    <div class="navbar">
+                    <a class="active" href="index.html">Home</a>
+                    <a href="Saint.html">Saint</a>
+                    <a href="Perth.html">Perth</a>
+                    <a href="Mark.html">Mark</a>
+                    <a href="Jackson.html">Jackson</a>
+                    <a href="Karry.html">Karry</a>
+                    <a href="Roy.html">Roy</a>
+                    </div>
+                    
+                    <div class="slideshow">
+                        <a href="Saint.html"><img class="mySlides" src="黄明明.jpg" style="width: 100%"></a>
+                        <a href="Perth.html"><img class="mySlides" src="王俊勇.jpg" style="width: 100%"></a>
+                        <a hidden="Mark.html"><img class="mySlides" src="陈瑞书.jpg" style="width: 100%"></a>
+                        <a href="Jackson.html"><img class="mySlides" src="易烊千玺.jpg" style="width: 100%"></a>
+                        <a href="Karry.html"><img class="mySlides" src="王俊凯.jpg" style="width: 100%"></a>
+                        <a href="Roy.html"><img class="mySlides" src="王源.jpg" style="width: 100%"></a>
+                    </div>
+                    
+                    <div style="text-align: center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                    </div>
+		</body>
+	</html>
