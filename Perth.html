@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+	<html>
+	<style>
+	body{
+		font-family:Comic Sans MS;
+		padding:10px;
+		margin:10px;
+		background:rgba(0,0,0,0.8);
+		color:white;
+                text-align: center;
+	}
+	h1{
+		text-align:center;
+	}
+	.navbar{
+		overflow: hidden;
+                background-color: black;
+                margin: 10px;
+	}
+	.navbar a {
+		color:white;
+		float:left;
+		text-decoration:none;
+		padding:14px 16px;
+	}
+	.navbar a:hover{
+		color:black;
+		background-color:white;
+	}
+        
+        .active{
+            color: white;
+            background-color:rgba(0,0,225,0.5);
+        }
+        
+        img{
+            display: grid;
+            margin: auto;
+        }
+	</style>
+		<head>
+		<title>Second Page</title>
+		<h1>Perth Tanapon Sukhumpantanasan</h1>
+		</head>
+		
+		<body>
+		<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="Saint.html">Saint</a>
+		<a class="active" href="Perth.html">Perth</a>
+		<a href="Mark.html">Mark</a>
+		<a href="Jackson.html">Jackson</a>
+		<a href="Karry.html">Karry</a>
+		<a href="Roy.html">Roy</a>
+		</div>
+                    
+			<h3>Detail</h3>
+                        <p>Native name: ธนพนธ์ สุขุมพันธนาสาร<br>
+                            Also Known as: เพิร์ธ;Perth;Perth Tanapon<br>
+                            Nationality: Thai<br>
+                            Gender: Male<br>
+                            Born: March 20, 2001<br>
+                            Age: 17<br>
+			</p>
+			<div class="slideshow-container">
+
+					<div class="mySlides fade">
+					  <!--<div class="numbertext">1 / 6</div>-->
+					  <img src="Perth.jpg" style="width: 100%">
+					  <!--<div class="text">Saint</div>-->
+					</div>
+	
+					<div class="mySlides fade">
+					  <!--<div class="numbertext">2 / 6</div>-->
+					  <img src="Perthppe.jpg" style="width: 100%">
+					  <!--<div class="text">Perth</div>-->
+					</div>
+				</div>
+				
+					<script>
+						//Slideshow
+						var slideIndex = 0;
+					showSlides();
+					// Thumbnail image controls
+					function currentSlide(n) {
+						showSlides(slideIndex = n);
+					}
+					function showSlides() {
+					var i;
+					var slides = document.getElementsByClassName("mySlides");
+					for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none"; 
+					}
+					slideIndex++;
+					if (slideIndex > slides.length) {slideIndex = 1} 
+					slides[slideIndex-1].style.display = "block"; 
+					setTimeout(showSlides, 5000); // Change image every 5 seconds
+					}
+					for (i = 0; i < dots.length; i++) {
+						dots[i].className = dots[i].className.replace(" active", "");
+					}
+					</script>
+		</body>
+	</html>
