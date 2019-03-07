@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+				<link href="Css.css" rel="stylesheet">
+				<!-- Global site tag (gtag.js) - Google Analytics -->
+
+				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133584425-1"></script>
+
+				<script>
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+                                        gtag('config', 'UA-133584425-1');
+
+				</script>
+		<title>Fourth Page</title>
+		<h1>Jackson 易烊千玺</h1>
+		</head>
+		
+		<body>
+		<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="Saint.html">Saint</a>
+		<a href="Perth.html">Perth</a>
+		<a href="Mark.html">Mark</a>
+		<a class="active" href="Jackson.html">Jackson</a>
+		<a href="Karry.html">Karry</a>
+		<a href="Roy.html">Roy</a>
+		</div>
+
+		<h3>Detail</h3>
+			<p>First Name: 烊千玺<br>
+				Family Name: 易<br>
+				Nationality:China<br>
+				Gender: Male<br>
+				Born: November, 28 2000<br>
+				Age:19<br>
+			</p>
+
+			<div class="content">
+
+		<div class="slideshow-container">
+
+				<div class="mySlides fade">
+				  <!--<div class="numbertext">1 / 6</div>-->
+				  <img src="Jackson.jpg" style="width: 100%">
+				  <!--<div class="text">Saint</div>-->
+				</div>
+
+				<div class="mySlides fade">
+				  <!--<div class="numbertext">2 / 6</div>-->
+				  <img src="JacksonYee.jpg" style="widows: 100%">
+				  <!--<div class="text">Perth</div>-->
+				</div>
+			</div>
+			</div>
+
+				<script>
+					//Slideshow
+					var slideIndex = 0;
+                showSlides();
+                // Thumbnail image controls
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+                function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; 
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1} 
+                slides[slideIndex-1].style.display = "block"; 
+                setTimeout(showSlides, 5000); // Change image every 5 seconds
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+				</script>
+		</body>
+	</html>
